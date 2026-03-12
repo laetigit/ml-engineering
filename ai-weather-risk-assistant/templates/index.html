@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Weather Risk Assistant</title>
+</head>
+
+<body>
+
+<h1>AI Weather Risk Assistant</h1>
+
+<form method="POST">
+    <label>Location:</label>
+    <input type="text" name="location" placeholder="Fort-de-France">
+    <button type="submit">Check Conditions</button>
+</form>
+
+{% if results %}
+
+<h2>Results for {{ results.location }}</h2>
+
+<h3>Temperature</h3>
+<p>{{ results.temperature }} °C</p>
+
+<h3>Air Quality</h3>
+<p>{{ results.air_quality }}</p>
+
+<h3>Sargassum Risk</h3>
+<p>{{ results.sargassum }}</p>
+
+<h3>Seismic Activity</h3>
+<p>{{ results.seismic }}</p>
+
+{% endif %}
+
+</body>
+</html>
